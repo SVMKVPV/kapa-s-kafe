@@ -1,4 +1,4 @@
-import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.168.0/build/three.module.js";
+let THREE; // 3D is optional; navigation and scroll UX load independently.
 
 const $ = (selector) => document.querySelector(selector);
 const $$ = (selector) => [...document.querySelectorAll(selector)];
@@ -351,9 +351,17 @@ function setupScene() {
   renderer.domElement.addEventListener("webglcontextlost",contextLost,{once:true});
 }
 
-try { setupScene(); } catch (error) {
-  console.warn("The 3D experience could not start; the readable site remains available.", error);
-  document.body.classList.add("no-webgl");
-}
+import("https://cdn.jsdelivr.net/npm/three@0.168.0/build/three.module.js")
+  .then(module => {
+    THREE = module;
+    try { setupScene(); } catch (error) {
+      console.warn("3D scene failed to initialise; using illustrated fallback.", error);
+      document.body.classList.add("no-webgl");
+    }
+  })
+  .catch(error => {
+    console.warn("3D library was unavailable; the interactive page remains usable.", error);
+    document.body.classList.add("no-webgl");
+  });
 window.addEventListener("load", () => document.body.classList.add("ready"), { once:true });
 setTimeout(() => document.body.classList.add("ready"), 1700);
