@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#191511">
+  <meta name="description" content="Explore Kapa's Kafe coffee storytelling, origin, brewing ritual and collection concepts. Filter and sort the newest experiences first.">
+  <meta property="og:title" content="Explore the Story — Kapa's Kafe">
+  <meta property="og:description" content="Discover and filter Kapa's Kafe origin, ritual, journey and collection experiences.">
+  <meta property="og:type" content="website">
+  <title>Explore the Story — Kapa's Kafe</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Fraunces:opsz,wght,SOFT,WONK@9..144,300,30,1;9..144,400,30,1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./catalog.css">
+  <script defer src="./catalog.js"></script>
+</head>
+<body class="explore-page">
+  <a class="skip-link" href="#browse">Skip to explore</a>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="site-header is-solid" id="top">
+    <a href="./index.html" class="brand" aria-label="Kapa's Kafe homepage">
+      <svg class="brand-mark" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="24" fill="none" stroke="currentColor" stroke-width="1"/><path d="M26 7c-17 11-18 27 0 38C43 34 43 18 26 7Z" fill="none" stroke="currentColor" stroke-width="1.35"/><path d="M29 13C17 24 18 33 24 40" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+      <span>KAPA’S <strong>KAFE</strong><small>PAPUA NEW GUINEA • AUSTRALIA</small></span>
+    </a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="./index.html#journey">The journey</a>
+      <a href="./index.html#origin">Our origin</a>
+      <a href="./index.html#collection">The coffee</a>
+      <a href="#browse" aria-current="page">Explore & sort</a>
+    </nav>
+    <a href="./index.html" class="header-cta">BACK TO THE JOURNEY <span aria-hidden="true">↗</span></a>
+  </header>
+  <main>
+    <section class="explore-hero" aria-labelledby="explore-title">
+      <div class="explore-hero-inner">
+        <p class="eyebrow"><span class="eyebrow-dash"></span> THE KAPA'S KAFE ARCHIVE</p>
+        <h1 id="explore-title">Follow your<br><em>curiosity.</em></h1>
+        <p>From the first coffee bean to the final, slow sip — explore every chapter in the order that feels right to you.</p>
+        <a class="explore-back-link" href="./index.html#journey">← RETURN TO THE CINEMATIC JOURNEY</a>
+      </div>
+    </section>
+    <section class="browse-section editorial-section" id="browse" aria-labelledby="browse-heading">
+      <div class="section-number">THE INTERACTIVE INDEX</div>
+      <div class="browse-intro">
+        <div class="browse-intro-copy">
+          <p class="eyebrow dark-eyebrow">CURATED FOR THE CURIOUS</p>
+          <h2 id="browse-heading">Every chapter.<br><em>Every detail.</em></h2>
+          <p>Search by name, filter by category, or choose your preferred order. The default is newest to oldest.</p>
+        </div>
+      </div>
+      <div data-kapa-catalog data-explore-page="true" data-page-size="6" aria-label="Filter and sort all Kapa's Kafe experiences">
+        <noscript><p>Interactive search and filters require JavaScript. You can still <a href="./index.html">view the story</a>.</p></noscript>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <span>© 2026 KAPA’S KAFE</span>
+    <span>CONCEPT EXPERIENCE • NO PRODUCTS FOR SALE YET</span>
+    <a href="./index.html">BACK TO THE STORY ↑</a>
+  </footer>
+</body>
+</html>
