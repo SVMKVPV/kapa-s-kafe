@@ -14,6 +14,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Fraunces:opsz,wght,SOFT,WONK@9..144,300,30,1;9..144,400,30,1;9..144,500,30,1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./catalog.css">
   <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <script>
@@ -22,6 +23,7 @@
       window.setTimeout(function () { document.body.classList.add("ready"); }, 850);
     });
   </script>
+  <script defer src="./catalog.js"></script>
   <script type="module" src="./main.js"></script>
 </head>
 <body>
@@ -38,12 +40,13 @@
       <a href="#journey">The journey</a>
       <a href="#origin">Our origin</a>
       <a href="#collection">The coffee</a>
+      <a href="./explore.html">Explore & sort</a>
     </nav>
     <a class="header-cta" href="#collection">DISCOVER THE COFFEE <span aria-hidden="true">↗</span></a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open navigation"><span></span><span></span></button>
   </header>
   <nav id="mobile-menu" class="mobile-menu" aria-label="Mobile navigation" hidden>
-    <a href="#journey">The journey</a><a href="#origin">Our origin</a><a href="#collection">The coffee</a><a href="#first-pour">First access</a>
+    <a href="#journey">The journey</a><a href="#origin">Our origin</a><a href="#collection">The coffee</a><a href="./explore.html">Explore & sort</a><a href="#first-pour">First access</a>
   </nav>
 
   <div class="chapter-tracker" aria-hidden="true">
@@ -175,6 +178,21 @@
           <a href="#first-pour" class="solid-button">GET FIRST ACCESS <span aria-hidden="true">↗</span></a>
           <p class="small-note">This is a design preview. No orders or payments are being taken.</p>
         </div>
+      </div>
+    </section>
+
+    <section class="browse-section editorial-section" id="browse" aria-labelledby="browse-heading">
+      <div class="section-number">IV. EXPLORE THE STORY</div>
+      <div class="browse-intro">
+        <div class="browse-intro-copy">
+          <p class="eyebrow dark-eyebrow">EVERY CUP HAS A STORY</p>
+          <h2 id="browse-heading">Explore at<br><em>your own pace.</em></h2>
+          <p>Find a chapter, origin detail or collection preview. Search and filter the experiences — most recently added first.</p>
+        </div>
+        <a class="browse-lead-link" href="./explore.html">OPEN THE FULL EXPLORE PAGE ↗</a>
+      </div>
+      <div data-kapa-catalog data-page-size="6" aria-label="Browse Kapa's Kafe experiences">
+        <noscript><p>JavaScript is required for interactive filtering. <a href="#journey">Start the journey</a> or <a href="#collection">see the coffee concept</a>.</p></noscript>
       </div>
     </section>
 
