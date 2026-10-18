@@ -257,3 +257,22 @@ h1 em,h2 em,h3 em{font-weight:300;color:#d4a36c}
  .cursor-glow,.load-curtain{display:none!important}
  #route-line{stroke-dashoffset:0}
 }
+
+
+/* Keep chapter surfaces transparent so the persistent WebGL canvas,
+   which lives below the story's text, remains visible throughout scrolling. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse at 80% 47%, #5c3b24 0%, #251a13 45%, #17120f 84%);
+}
+.chapter,
+.chapter:nth-child(2),
+.chapter:nth-child(3),
+.chapter:nth-child(4),
+.chapter:nth-child(5) {
+  background: transparent;
+}
