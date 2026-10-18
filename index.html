@@ -16,6 +16,12 @@
   <link rel="stylesheet" href="./styles.css">
   <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script>
+    // Keep the page accessible even when the optional 3D CDN is unavailable.
+    document.addEventListener("DOMContentLoaded", function () {
+      window.setTimeout(function () { document.body.classList.add("ready"); }, 850);
+    });
+  </script>
   <script type="module" src="./main.js"></script>
 </head>
 <body>
