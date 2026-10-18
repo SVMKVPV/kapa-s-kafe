@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#191511">
+  <meta name="description" content="Kapa's Kafe — a cinematic coffee journey inspired by the Highlands of Papua New Guinea. From origin to ritual, discover the story in every cup.">
+  <meta property="og:title" content="Kapa's Kafe — From PNG to Your Cup">
+  <meta property="og:description" content="The journey in every cup. An immersive exploration of coffee and its origins in Papua New Guinea.">
+  <meta property="og:type" content="website">
+  <title>Kapa's Kafe — The Journey in Every Cup</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Fraunces:opsz,wght,SOFT,WONK@9..144,300,30,1;9..144,400,30,1;9..144,500,30,1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script type="module" src="./main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#journey">Skip to main content</a>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="load-curtain" aria-hidden="true"><span>KAPA’S KAFE <span class="load-line"></span></span></div>
+  <header class="site-header" id="top">
+    <a href="#top" class="brand" aria-label="Kapa's Kafe, back to top">
+      <svg class="brand-mark" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="24" fill="none" stroke="currentColor" stroke-width="1"/><path d="M26 7c-17 11-18 27 0 38C43 34 43 18 26 7Z" fill="none" stroke="currentColor" stroke-width="1.35"/><path d="M29 13C17 24 18 33 24 40" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+      <span>KAPA’S <strong>KAFE</strong><small>PAPUA NEW GUINEA • AUSTRALIA</small></span>
+    </a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="#journey">The journey</a>
+      <a href="#origin">Our origin</a>
+      <a href="#collection">The coffee</a>
+    </nav>
+    <a class="header-cta" href="#collection">DISCOVER THE COFFEE <span aria-hidden="true">↗</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open navigation"><span></span><span></span></button>
+  </header>
+  <nav id="mobile-menu" class="mobile-menu" aria-label="Mobile navigation" hidden>
+    <a href="#journey">The journey</a><a href="#origin">Our origin</a><a href="#collection">The coffee</a><a href="#first-pour">First access</a>
+  </nav>
+
+  <div class="chapter-tracker" aria-hidden="true">
+    <span class="tracker-caption">THE RITUAL</span>
+    <div class="tracker-line"><span id="progress-fill"></span></div>
+    <span id="tracker-number">01 / 05</span>
+  </div>
+  <div class="scene-fixed" aria-hidden="true">
+    <div id="webgl-stage"></div>
+    <div class="scene-fallback"><div class="fallback-bean"></div><div class="fallback-orbit"></div></div>
+    <span class="scene-caption" id="scene-caption">01 — THE ORIGIN</span>
+  </div>
+
+  <main>
+    <div class="story" id="journey">
+      <section class="chapter chapter-hero" id="chapter-1" data-chapter="0" aria-labelledby="hero-heading">
+        <div class="chapter-atmosphere haze-one"></div>
+        <div class="chapter-content">
+          <p class="eyebrow"><span class="eyebrow-dash"></span> FROM THE HIGHLANDS OF PNG</p>
+          <h1 id="hero-heading">A world of origin.<br><em>In every cup.</em></h1>
+          <p class="chapter-description">Every extraordinary cup begins somewhere. Ours begins with the mountains, the earth, and the people of Papua New Guinea.</p>
+          <a class="text-link" href="#chapter-2">FOLLOW THE JOURNEY <span aria-hidden="true">↘</span></a>
+        </div>
+        <div class="chapter-bottom"><span>01 / WHERE EVERY CUP BEGINS</span><span class="scroll-cue">SCROLL TO EXPERIENCE <span aria-hidden="true">↓</span></span></div>
+        <div class="giant-outline-word" aria-hidden="true">ORIGIN</div>
+      </section>
+
+      <section class="chapter" id="chapter-2" data-chapter="1" aria-labelledby="chapter-two-heading">
+        <div class="chapter-content">
+          <p class="eyebrow"><span class="eyebrow-dash"></span> CHAPTER TWO / THE TRANSFORMATION</p>
+          <h2 id="chapter-two-heading">Suspended<br><em>in warmth.</em></h2>
+          <p class="chapter-description">A moment between harvest and ritual. A thousand little stories, waiting to become something remarkable.</p>
+          <div class="sensory-notes"><span>THE CRACKLE</span><i></i><span>THE AROMA</span><i></i><span>THE ANTICIPATION</span></div>
+        </div>
+        <div class="chapter-bottom"><span>02 / THE TRANSFORMATION</span><span>SCROLL TO TRANSFORM ↓</span></div>
+      </section>
+
+      <section class="chapter" id="chapter-3" data-chapter="2" aria-labelledby="chapter-three-heading">
+        <div class="chapter-content">
+          <p class="eyebrow"><span class="eyebrow-dash"></span> CHAPTER THREE / THE FOUNDATION</p>
+          <h2 id="chapter-three-heading">The art is<br><em>in the details.</em></h2>
+          <p class="chapter-description">Ground by ground. Layer by layer. Rich texture meets a quiet kind of patience, setting the stage for what comes next.</p>
+          <span class="ornament-quote">“THE BEAUTY OF SLOW.”</span>
+        </div>
+        <div class="chapter-bottom"><span>03 / THE FOUNDATION</span><span>SCROLL TO POUR ↓</span></div>
+      </section>
+
+      <section class="chapter" id="chapter-4" data-chapter="3" aria-labelledby="chapter-four-heading">
+        <div class="chapter-content">
+          <p class="eyebrow"><span class="eyebrow-dash"></span> CHAPTER FOUR / THE EXTRACTION</p>
+          <h2 id="chapter-four-heading">Two streams.<br><em>One perfect pause.</em></h2>
+          <p class="chapter-description">Golden crema forms, aromas rise, and time slows. The quiet precision of the perfect espresso.</p>
+          <div class="extraction-metadata"><div><small>THE RITUAL</small><span>Slow & considered</span></div><div><small>THE RESULT</small><span>Worth the wait</span></div></div>
+        </div>
+        <div class="chapter-bottom"><span>04 / THE EXTRACTION</span><span>SCROLL TO SAVOUR ↓</span></div>
+      </section>
+
+      <section class="chapter chapter-five" id="chapter-5" data-chapter="4" aria-labelledby="chapter-five-heading">
+        <div class="chapter-content">
+          <p class="eyebrow"><span class="eyebrow-dash"></span> CHAPTER FIVE / THE CONNECTION</p>
+          <h2 id="chapter-five-heading">From PNG.<br><em>To your cup.</em></h2>
+          <p class="chapter-description">From highland landscapes to your favourite quiet moment. Far apart on the map. Closer with every sip.</p>
+          <a class="text-link" href="#origin">MEET THE ORIGIN <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="chapter-bottom"><span>05 / THE CONNECTION</span><span>KEEP EXPLORING ↓</span></div>
+      </section>
+    </div>
+
+    <section class="origin editorial-section" id="origin" aria-labelledby="origin-heading">
+      <div class="section-number">I. THE ORIGIN</div>
+      <div class="origin-grid">
+        <div class="origin-illustration" role="img" aria-label="Artistic landscape illustration of misty mountains and sunrise inspired by the Papua New Guinea Highlands">
+          <div class="sun"></div><div class="mountain mountain-back"></div><div class="mountain mountain-mid"></div><div class="mountain mountain-front"></div>
+          <span class="origin-stamp">GROWN WITH HEART<br>PNG HIGHLANDS</span>
+          <div class="illustration-caption">AN ORIGIN WORTH KNOWING — PAPUA NEW GUINEA</div>
+        </div>
+        <div class="origin-copy">
+          <p class="eyebrow dark-eyebrow">ROOTED IN SOMETHING REAL</p>
+          <h2 id="origin-heading">Before the first sip,<br><em>there is a place.</em></h2>
+          <p>In the Highlands of Papua New Guinea, coffee is more than a crop. It is tied to land, family and generations of knowledge.</p>
+          <p>Kapa’s Kafe is a vision to bring that origin closer to coffee lovers in Australia — with respect for the people who grow it and care in every step of the journey.</p>
+          <div class="origin-note"><span class="note-symbol">✳</span><span>Our sourcing partners, roasting process and product range will be shared once confirmed. The story matters too much to invent.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="route-section editorial-section" id="route" aria-labelledby="route-heading">
+      <div class="section-number">II. FROM HERE TO THERE</div>
+      <div class="route-head">
+        <div><p class="eyebrow dark-eyebrow">GREAT DISTANCES. SMALL MOMENTS.</p><h2 id="route-heading">A journey worth<br><em>tracing.</em></h2></div>
+        <div class="route-city-picker"><label for="city-name">WHERE WOULD YOUR CUP BE?</label><div class="city-field"><input id="city-name" type="text" maxlength="36" placeholder="Your city" aria-label="Enter your city" autocomplete="address-level2"><button id="city-update" type="button" aria-label="Update the destination on the map">↗</button></div></div>
+      </div>
+      <div class="route-map">
+        <div class="route-grid"></div>
+        <svg viewBox="0 0 1000 360" role="img" aria-label="Illustrative journey line connecting the Papua New Guinea Highlands to your city" preserveAspectRatio="xMidYMid meet">
+          <defs><linearGradient id="routeGradient"><stop stop-color="#906038"/><stop offset="1" stop-color="#d1a371"/></linearGradient></defs>
+          <path class="route-arc-shadow" d="M173 211 Q486 -10 810 221" fill="none" stroke="#bba286" stroke-width="1" stroke-dasharray="3 10" opacity=".45"></path>
+          <path id="route-line" d="M173 211 Q486 -10 810 221" fill="none" stroke="url(#routeGradient)" stroke-width="2" stroke-linecap="round"></path>
+          <circle cx="173" cy="211" r="6" fill="#6c482e"/><circle cx="173" cy="211" r="17" fill="none" stroke="#9d7047" opacity=".4"/><circle cx="810" cy="221" r="6" fill="#6c482e"/><circle cx="810" cy="221" r="17" fill="none" stroke="#9d7047" opacity=".4"/>
+          <circle id="route-dot" cx="173" cy="211" r="7" fill="#d8b081" opacity="0"/>
+        </svg>
+        <div class="map-origin-marker"><span>01 — ORIGIN</span><strong>PNG HIGHLANDS</strong><small>COFFEE'S BEGINNING</small></div>
+        <div class="map-dest-marker"><span>04 — DESTINATION</span><strong id="city-result">YOUR CITY</strong><small>A CUP TO REMEMBER</small></div>
+        <div class="route-steps" aria-label="Planned journey stages"><span>01 <b>Growing</b></span><span>02 <b>Roasting*</b></span><span>03 <b>Packaging*</b></span><span>04 <b>Delivery*</b></span></div>
+      </div>
+      <p class="route-disclaimer">* Illustrative concept journey. Exact sourcing, processing and fulfilment locations are not yet confirmed.</p>
+    </section>
+
+    <section class="collection editorial-section" id="collection" aria-labelledby="collection-heading">
+      <div class="section-number">III. THE COLLECTION</div>
+      <div class="collection-head"><p class="eyebrow dark-eyebrow">SOMETHING BEAUTIFUL IS BREWING</p><h2 id="collection-heading">A little piece<br>of the <em>Highlands.</em></h2><p>Considered coffee. Beautifully presented. Designed to make the everyday feel a little more extraordinary.</p></div>
+      <div class="collection-grid">
+        <div class="package-display">
+          <div class="package-light"></div>
+          <div class="bag-wrap" id="bag-wrap" tabindex="0" role="img" aria-label="Illustrative, three-dimensional Kapa's Kafe coffee bag packaging concept, rotate by moving the pointer">
+            <div class="coffee-bag"><div class="bag-top"></div><div class="bag-face"><span class="bag-overline">PAPUA NEW GUINEA</span><span class="bag-emblem">✳</span><span class="bag-title">KAPA’S<br><em>KAFE</em></span><span class="bag-rule"></span><span class="bag-sub">THE HIGHLAND EDITION</span><span class="bag-weight">ORIGIN SERIES • CONCEPT PACKAGING</span></div><div class="bag-side"></div><div class="bag-bottom"></div></div>
+          </div>
+          <div class="package-ground"></div>
+          <span class="package-index">OBJECT STUDY / 001</span>
+          <span class="package-hint">MOVE TO EXPLORE ↗</span>
+        </div>
+        <div class="collection-details">
+          <div class="collection-status"><span class="status-dot"></span> CONCEPT EDITION — NOT YET FOR SALE</div>
+          <h3>The Highland<br><em>Edition.</em></h3>
+          <p>A first look at the Kapa’s Kafe packaging vision. The actual beans, tasting notes, weights and pricing will be announced after sourcing and testing.</p>
+          <div class="detail-row"><span>ORIGIN</span><strong>Papua New Guinea — proposed</strong></div>
+          <div class="detail-row"><span>ROAST & FLAVOUR</span><strong>To be confirmed</strong></div>
+          <div class="detail-row"><span>AVAILABILITY</span><strong>Coming later</strong></div>
+          <a href="#first-pour" class="solid-button">GET FIRST ACCESS <span aria-hidden="true">↗</span></a>
+          <p class="small-note">This is a design preview. No orders or payments are being taken.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing" id="first-pour" aria-labelledby="closing-heading">
+      <div class="closing-halo"></div>
+      <div class="closing-inner">
+        <div class="closing-star" aria-hidden="true">✳</div>
+        <p class="eyebrow closing-eyebrow">FROM THE HIGHLANDS OF PNG TO YOUR CUP</p>
+        <h2 id="closing-heading">Brew<br><em>the story.</em></h2>
+        <p>The best things take time. Be among the first to hear when our coffee journey begins.</p>
+        <form name="kapa-first-pour" id="waitlist-form" method="POST" action="./thank-you.html" data-netlify="true" data-netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="kapa-first-pour">
+          <p class="honeypot"><label>Leave this field blank: <input name="bot-field"></label></p>
+          <label class="visually-hidden" for="email-input">Email address</label>
+          <div class="email-row"><input type="email" id="email-input" name="email" placeholder="Your email address" required autocomplete="email"><button type="submit">JOIN THE FIRST POUR ↗</button></div>
+          <p class="form-privacy">Only updates about Kapa’s Kafe. No spam. Unsubscribe anytime.</p>
+        </form>
+        <a class="order-now-link" href="#collection">ORDER NOW <span aria-hidden="true">↗</span></a>
+        <span class="order-context">Preview collection only — ordering opens at a later date.</span>
+      </div>
+      <footer class="site-footer"><span>© <span id="copyright-year">2026</span> KAPA’S KAFE</span><span>CRAFTED WITH RESPECT FOR ORIGIN</span><a href="#top">BACK TO THE TOP ↑</a></footer>
+    </section>
+  </main>
+</body>
+</html>
