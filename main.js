@@ -30,7 +30,7 @@ function initChrome() {
     trackerNumber.textContent = `0${current + 1} / 05`;
     progressFill.style.height = `${(motion.progress / 4) * 100}%`;
     $("#scene-caption").textContent = captions[current];
-    const hiding = y > storyStart + story.offsetHeight - innerHeight * .35;
+    const hiding = y > storyStart + story.offsetHeight - innerHeight * .06;
     stage.style.opacity = hiding ? "0" : "1";
     tracker.style.opacity = hiding ? "0" : "1";
     header.classList.toggle("is-solid", y > 80);
